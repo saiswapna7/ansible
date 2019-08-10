@@ -7,7 +7,7 @@
 
 - name:  copy my tom config file into nodes
   template:
-    src: templates/mytomconfig.j2
+    src: templates/webconfig.j2
     dest: /etc/default/tomcat7
   notify: restarttomcat
 
@@ -22,7 +22,7 @@
 
 - name: copy tomuser file into nodes 
   template:
-    src: templates/mytomusers.j2
+    src: templates/webusers.j2
     dest: /etc/tomcat7/tomcat-users.xml
   notify: restarttomcat
 
